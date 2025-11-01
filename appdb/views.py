@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect 
+from .models import Service
 from .forms import ContactForm
 
 def contact_view(request):
@@ -13,3 +14,7 @@ def contact_view(request):
 
 def success_view(request):
     return render(request, 'success.html')
+
+def services_view(request):
+    services = Service.objects.all()
+    return render(request, 'services.html', {'services': services})
