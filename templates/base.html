@@ -15,11 +15,13 @@
             <div class="space-x-4">
                 <a href="#" class="hover:text-gray-200 transition">Home</a>
                 <a href="{% url 'services'%}" class="hover:text-gray-200 transition">Service</a>
-                <a href="#" class="hover:text-gray-200 transition">Contact</a>
+		<a href="{url 'contact'}" class="hover:text-gray-200 transition">Contact</a>
             </div>
         </div>
     </nav>
     {% block contact %}
+    {% endblock %}
+    {% block think %}
     {% endblock %}
   <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4 mt-auto">
