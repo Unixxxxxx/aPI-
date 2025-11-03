@@ -19,5 +19,3 @@ def services_view(request):
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
 
-def form_views(request):
-    return render(request, 'form.html')
