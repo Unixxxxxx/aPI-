@@ -18,4 +18,5 @@ def success_view(request):
 def services_view(request):
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
-
+def index(request):
+    return render(request, 'index.html', {})
