@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html'%}
+{% block index %}
   <title>Corporate Traveller</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/942/942751.png">
-</head>
 <body class="text-gray-800">
 
   <!-- Hero Section -->
@@ -112,12 +106,4 @@
       </details>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center py-6 text-gray-600 text-sm">
-    <p>© 2025 Corporate Traveller. All Rights Reserved.</p>
-  </footer>
-
-</body>
-</html>
-
+{% endblock %}
