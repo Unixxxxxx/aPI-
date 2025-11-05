@@ -1,1 +1,55 @@
-<h1> this is neew page </h1<>
+{% extends "base.html" %}
+
+{% block new %}
+<body class="bg-gradient-to-br from-blue-100 via-white to-indigo-100 min-h-screen">
+  <div class="max-w-4xl mx-auto py-16 px-6 text-center">
+
+    <!-- Title -->
+    <h1 class="text-5xl font-extrabold text-gray-800 mb-4">About Us</h1>
+    <p class="text-gray-600 text-lg mb-12">
+      We craft high-performance, modern, and secure web solutions tailored for your business needs.
+    </p>
+
+    <!-- Section: What We Do -->
+    <div class="bg-white shadow-2xl rounded-3xl p-10 border border-gray-100">
+      <h2 class="text-3xl font-semibold text-blue-700 mb-4">What We Do</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Our team specializes in building responsive, SEO-optimized, and scalable web applications.
+        From sleek frontend designs to powerful backend systems, we deliver complete solutions that
+        drive engagement and performance.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <div class="p-6 rounded-2xl shadow-md bg-gradient-to-br from-blue-50 to-white">
+          <h3 class="text-xl font-bold text-blue-700 mb-3">Frontend Development</h3>
+          <p class="text-gray-600 text-sm">
+            Creating elegant, user-friendly interfaces using HTML, CSS, JavaScript, React, and Tailwind CSS.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl shadow-md bg-gradient-to-br from-blue-50 to-white">
+          <h3 class="text-xl font-bold text-blue-700 mb-3">Backend Solutions</h3>
+          <p class="text-gray-600 text-sm">
+            Secure, efficient, and scalable backends built with Django, Flask, and RESTful APIs.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl shadow-md bg-gradient-to-br from-blue-50 to-white">
+          <h3 class="text-xl font-bold text-blue-700 mb-3">Full Stack Projects</h3>
+          <p class="text-gray-600 text-sm">
+            We handle everything from idea to deployment — including hosting, database, and optimization.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-16">
+      <a href="/contact" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-semibold">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</body>
+{% endblock %}
+
