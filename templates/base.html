@@ -11,10 +11,11 @@
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white shadow-md">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
-		<a href="/" class="text-2xl font-bold">Home page </a>
+		<a href="{% url 'new' %}" class="text-2xl font-bold">Home page </a>
             <div class="space-x-4">
 		    <a href="{% url 'index' %}" class="hover:text-gray-200 transition">Home</a>
                 <a href="{% url 'services'%}" class="hover:text-gray-200 transition">Service</a>
+		<a href="{% url 'new' %}" class="hover:text-gray-200 transition">About</a>
 		<a href="{% url 'enquiry' %}" class="hover:text-gray-200 transition">Contact</a>
             </div>
         </div>
