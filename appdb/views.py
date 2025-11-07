@@ -34,4 +34,5 @@ def Enquiry_view(request):
 
 def success_view(request):
     return render(request, 'success.html')
-
+def new(request):
+    return render(request, 'new/new.html', {})
