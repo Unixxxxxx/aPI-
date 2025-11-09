@@ -1,46 +1,12 @@
 {% extends 'base.html'%}
 {% block think %}
-
-    <!-- Top Section  -->
-
-
-<section class="bg-gradient-to-b from-orange-100 via-white to-orange-50 py-10">
-  <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
-      Stay • Puja • Travel – All in One Place
-    </h1>
-    <h2 class="text-xl md:text-2xl font-semibold text-orange-600 mb-4">
-      Ideal for Families, Groups & Pilgrims
-    </h2>
-    <p class="text-gray-600 text-sm md:text-base">
-      Making Your Yatra Easy, Safe & Comfortable <br>
-      India's Most Trusted Platform for Religious Stays <br>
-      Lakhs of Pilgrims Served Across India Since 2016
-    </p>
-  </div> 
-
-    <!-- 4 Images Grid -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 max-w-6xl mx-auto px-4">
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden">
-      <img src="/" alt="Temple 1" class="w-full h-48 object-cover">
-    </div>
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden">
-      <img src="/" alt="Temple 2" class="w-full h-48 object-cover">
-    </div>
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden">
-      <img src="/" alt="Temple 3" class="w-full h-48 object-cover">
-    </div>
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden">
-      <img src="/" alt="Temple 4" class="w-full h-48 object-cover">
-    </div>
-  </div>
-</section>
-
+{% load static %}
 <!-- Service Cards Section -->
 <section class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
     <div class="bg-white shadow-md rounded-2xl overflow-hidden">
-      <img src="/" alt="Web Development" class="w-full h-48 object-cover">
+	    <img src="{% static 'service_images/ChatGPT_Image_Apr_13_2025_10_14_59_AM.png
+ss1.jpg'%}" alt="Web Development" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800 mb-2">Web Development</h3>
         <p class="text-gray-600 mb-4">Build modern, responsive, and secure web applications tailored for your needs.</p>
