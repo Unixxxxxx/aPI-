@@ -1,6 +1,24 @@
 {% extends 'base.html'%}
+{% load static	%}
 {% block think %}
-  
+<div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-xl shadow-lg mt-8">
+  <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 1">
+    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 2">
+    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 3">
+    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 4">
+  </div>
+
+  <!-- Prev / Next buttons -->
+  <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 opacity-75 hover:opacity-100">
+    &#10094;
+  </button>
+  <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 opacity-75 hover:opacity-100">
+    &#10095;
+  </button>
+</div>  
+
+
   <!-- Services Section -->
   <section class="max-w-6xl mx-auto px-8 py-12 grid md:grid-cols-3 gap-6">
     <div class="bg-white p-6 rounded-2xl shadow-lg">
@@ -153,6 +171,31 @@ ss1.jpg'%}" alt="Web Development" class="w-full h-48 object-cover">
       city.style.display = city.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
     });
   });
+</script>
+
+<script>
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const totalSlides = slides.length;
+  let index = 0;
+
+  // Show next slide
+  function showNext() {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Show previous slide
+  function showPrev() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  document.getElementById("next").addEventListener("click", showNext);
+  document.getElementById("prev").addEventListener("click", showPrev);
+
+  // Auto-slide every 10 seconds
+  setInterval(showNext, 10000);
 </script>
 
     <!-- 🔹 Top Image Gallery Section 
