@@ -11,22 +11,26 @@
   <!-- 🌈 NAVBAR -->
   <nav class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
+      <!-- Logo
       <div class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition">
         MyBrand
       </div>
+      -->
+      <a href="/" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition">
+MyBrand
+</a>
 
       <!-- Menu -->
       <ul class="hidden md:flex space-x-8 font-semibold">
-        <li><a href="{% url 'services'%}" class="hover:text-indigo-600 transition">Home</a></li>
+        <li><a href="{% url 'index'%}" class="hover:text-indigo-600 transition">Home</a></li>
         <li><a href="{% url 'services'%}" class="hover:text-indigo-600 transition">Services</a></li>
-        <li><a href="#" class="hover:text-indigo-600 transition">Projects</a></li>
-        <li><a href="#" class="hover:text-indigo-600 transition">About</a></li>
-        <li><a href="#" class="hover:text-indigo-600 transition">Contact</a></li>
+        <li><a href="{% url 'services'%}" class="hover:text-indigo-600 transition">Projects</a></li>
+        <li><a href="{% url 'new'%}" class="hover:text-indigo-600 transition">About</a></li>
+        <li><a href="{% url 'enquiry'%}" class="hover:text-indigo-600 transition">Contact</a></li>
       </ul>
 
       <!-- Button -->
-      <a href="#"
+      <a href="{% url 'enquiry' %}"
          class="hidden md:inline-block bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition">
          Get Started
       </a>
@@ -40,9 +44,9 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
       <ul class="flex flex-col items-center space-y-4 py-4 font-semibold">
-        <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+        <li><a href="{% url 'index'%}" class="hover:text-indigo-600">Home</a></li>
 	<li><a href="{% url 'services'%}" class="hover:text-indigo-600">Services</a></li>
-	<li><a href="{% url 'enquiry' %}" class="hover:text-indigo-600">Projects</a></li>
+	<li><a href="{% url 'services' %}" class="hover:text-indigo-600">Projects</a></li>
 	<li><a href="{% url 'new'%}" class="hover:text-indigo-600">About</a></li>
 	<li><a href="{% url 'enquiry'%}" class="hover:text-indigo-600">Contact</a></li>
       </ul>
@@ -79,10 +83,10 @@
       <div>
         <h2 class="text-lg font-semibold text-white mb-3">Quick Links</h2>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:text-indigo-400 transition">Home</a></li>
-          <li><a href="#" class="hover:text-indigo-400 transition">Services</a></li>
-          <li><a href="#" class="hover:text-indigo-400 transition">About</a></li>
-          <li><a href="#" class="hover:text-indigo-400 transition">Contact</a></li>
+          <li><a href="{% url 'index'%}" class="hover:text-indigo-400 transition">Home</a></li>
+          <li><a href="{% url 'services'%}" class="hover:text-indigo-400 transition">Services</a></li>
+          <li><a href="{% url 'new'%}" class="hover:text-indigo-400 transition">About</a></li>
+          <li><a href="{% url 'enquiry'%}" class="hover:text-indigo-400 transition">Contact</a></li>
         </ul>
       </div>
 
@@ -90,10 +94,10 @@
       <div>
         <h2 class="text-lg font-semibold text-white mb-3">Follow Us</h2>
         <div class="flex space-x-5">
-          <a href="#" class="hover:text-indigo-400 text-2xl transition">🌐</a>
-          <a href="#" class="hover:text-indigo-400 text-2xl transition">🐦</a>
-          <a href="#" class="hover:text-indigo-400 text-2xl transition">📸</a>
-          <a href="#" class="hover:text-indigo-400 text-2xl transition">💼</a>
+          <a href="{% url 'services'%}" class="hover:text-indigo-400 text-2xl transition">🌐</a>
+          <a href="{% url 'services'%}" class="hover:text-indigo-400 text-2xl transition">🐦</a>
+          <a href="{% url 'services'%}" class="hover:text-indigo-400 text-2xl transition">📸</a>
+          <a href="{% url 'services'%}" class="hover:text-indigo-400 text-2xl transition">💼</a>
         </div>
       </div>
     </div>
