@@ -1,44 +1,5 @@
 {% extends 'base1.html'%}
 {% block index %}
-
-<section
-  class="relative bg-cover bg-center bg-no-repeat text-white py-24 md:py-32"
-  style="background-image: url('/media/service_images/image4.jpg');"
->
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-pink-600/70"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
-    <p class="uppercase font-semibold text-sm md:text-base tracking-wider mb-4">
-      South Africa’s #1 SME Travel Partner
-    </p>
-
-    <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
-      Take the hassle out of your corporate travel
-    </h1>
-
-    <p class="text-base md:text-lg mb-8 text-gray-100">
-      Our business travel experts deliver personalized service backed by a global brand network.
-    </p>
-
-    <a href="{% url 'enquiry' %}" class="inline-block bg-white text-pink-600 font-semibold px-8 py-3 rounded-full hover:bg-pink-100 transition duration-300"
-    >
-      Talk to an Expert
-    </a>
-  </div>
-
-  <!-- Optional subtle gradient at bottom -->
-  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-pink-700/40 to-transparent"></div>
-</section>
-
-
-
-
-
-
-
-`
   <title>Corporate Traveller</title>
 <body class="text-gray-800">
 
@@ -145,4 +106,5 @@
       </details>
     </div>
   </section>
+
 {% endblock %}
