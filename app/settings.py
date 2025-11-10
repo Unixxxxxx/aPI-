@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ws_gb_)*0mwl^koi4ni+7ml0je1acya4mplj%ry1t%+uhp-mx!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['api-4-vigx.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
