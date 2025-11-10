@@ -1,23 +1,62 @@
 {% extends 'base.html'%}
 {% load static	%}
 {% block think %}
-<div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-xl shadow-lg mt-8">
+<!-- Responsive Image Slider -->
+<div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-lg mt-6">
+  <!-- Slides -->
   <div id="slider" class="flex transition-transform duration-700 ease-in-out">
-    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 1">
-    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 2">
-    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 3">
-    <img src="/media/service_images/image4.jpg" class="w-full object-cover" alt="Slide 4">
+    <img src="/media/service_images/image1.jpg" alt="Slide 1"
+         class="w-full flex-shrink-0 object-cover h-[220px] sm:h-[350px] md:h-[450px]" />
+    <img src="/media/service_images/image1.jpg" alt="Slide 2"
+         class="w-full flex-shrink-0 object-cover h-[220px] sm:h-[350px] md:h-[450px]" />
+    <img src="/media/service_images/image1.jpg" alt="Slide 3"
+         class="w-full flex-shrink-0 object-cover h-[220px] sm:h-[350px] md:h-[450px]" />
+    <img src="/media/service_images/image1.jpg" alt="Slide 4"
+         class="w-full flex-shrink-0 object-cover h-[220px] sm:h-[350px] md:h-[450px]" />
   </div>
 
-  <!-- Prev / Next buttons -->
-  <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 opacity-75 hover:opacity-100">
+  <!-- Navigation Buttons -->
+  <button id="prev"
+          class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-gray-800/60 text-white rounded-full p-2 sm:p-3 hover:bg-gray-900 transition">
     &#10094;
   </button>
-  <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 opacity-75 hover:opacity-100">
+  <button id="next"
+          class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-gray-800/60 text-white rounded-full p-2 sm:p-3 hover:bg-gray-900 transition">
     &#10095;
   </button>
-</div>  
 
+  <!-- Dots / Indicators -->
+  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+    <span class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white/70 rounded-full cursor-pointer"></span>
+    <span class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white/70 rounded-full cursor-pointer"></span>
+    <span class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white/70 rounded-full cursor-pointer"></span>
+    <span class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white/70 rounded-full cursor-pointer"></span>
+  </div>
+</div>
+
+<!-- Slider Script -->
+<script>
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const totalSlides = slides.length;
+  let index = 0;
+
+  document.getElementById("next").onclick = () => {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  document.getElementById("prev").onclick = () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  // Optional: Auto-slide every 5 seconds
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 5000);
+</script>
 
   <!-- Services Section -->
   <section class="max-w-6xl mx-auto px-8 py-12 grid md:grid-cols-3 gap-6">
