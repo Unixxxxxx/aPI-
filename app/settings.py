@@ -79,14 +79,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myproject_db',
-        'USER': 'myuser',
-        'PASSWORD': 'Apple123@',
-        'HOST': 'localhost',
+        'NAME': os.getenv('MYSQL_DATABASE', 'mydb'),
+        'USER': os.getenv('MYSQL_USER', 'myuser'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'mypassword'),
+        'HOST': 'db',  # service name in docker-compose
         'PORT': '3306',
     }
 }
-
 
 
 # Password validation
