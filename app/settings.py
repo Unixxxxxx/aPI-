@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+import dj_database_url
 import os 
+from decouple import config
 from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,14 +79,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 # settings.py in Django
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQL_DATABASE', 'your_db_name'),
-        'USER': os.getenv('MYSQL_USER', 'your_user'),
-        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'your_password'),
-        'HOST': os.getenv('MYSQL_HOST', 'mysql-xxxxxx.render.com'),
-        'PORT': os.getenv('MYSQL_PORT', '3306'),
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL', default='postgres://localhost:5432/postgres'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 
