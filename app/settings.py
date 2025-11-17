@@ -78,13 +78,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # settings.py in Django
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL', default='postgres://localhost:5432/postgres'),
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+#DATABASES = {
+ #   'default': dj_database_url.config(
+  #      default=config('DATABASE_URL', default='postgres://localhost:5432/postgres'),
+   #     conn_max_age=600,
+    #    ssl_require=True
+    #)
+#}
 
 
 # Password validation
