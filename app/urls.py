@@ -22,7 +22,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('appdb.urls')),
-    path('',include('new.urls')),
 ] 
 
 if settings.DEBUG:
