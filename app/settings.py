@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-from django.contrib import admin 
 import dj_database_url
 import os 
 from decouple import config
@@ -156,6 +155,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-admin.site.site_header = "This is my admin page"
-admin.site.site_title = "This is admin of my Application"
-admin.site.index_title = 'welcome to my dashboard'
