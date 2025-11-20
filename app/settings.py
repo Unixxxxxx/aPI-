@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-from dajngo.contrib import admin 
+from django.contrib import admin 
 import dj_database_url
 import os 
 from decouple import config
