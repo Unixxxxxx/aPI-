@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Contact, Service , Enquiry 
 
+
+admin.site.site_header ="Trevax Admin" 
+
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'number')  # Columns to show in admin
