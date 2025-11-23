@@ -4,6 +4,7 @@ from .models import Contact, Service , Enquiry
 
 admin.site.site_header ="Trevax Admin" 
 admin.site.site_title ="Secure_Path admin"
+admin.site.index_title = "Welcome to The admin panal"
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
