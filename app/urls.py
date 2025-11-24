@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('appdb.urls')),
     path('',include('itinerary.urls')),
+    path('product/', include('product.urls')),
 ] 
 
 
