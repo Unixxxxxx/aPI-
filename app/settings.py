@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'appdb',
     'itinerary',
-    'product',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +62,7 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR /'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,18 +141,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# STATIC SETTINGS (for reference)
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC & MEDIA SETTINGS
 
+# Media
+# Media files
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'app' / 'media'
+
+# Static files
+STATIC_URL = '/media/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'media',     # Your project-level static folder
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # For collectstatic
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
