@@ -24,8 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Give separate base paths
-    path('', include('appdb.urls')),               # main site
-    path('itinerary/', include('itinerary.urls')), # second app
+    path('', include('appdb.urls')),    
 ]
 
 handler404 = 'app.views.custom_404'

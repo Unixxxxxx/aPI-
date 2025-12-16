@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'appdb',
-    'itinerary',
 ]
 
 MIDDLEWARE = [
